@@ -1,0 +1,93 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title onclick="alert('Hi')">Lorem Ipsum</title>
+<link href="Styles/MainStyle.css" rel="stylesheet" type="text/css">
+<script src="Scripts/MainScript.js"></script>  
+<script type="text/javascript">
+
+var slideShowImages = new Array();
+slideShowImages[0] = new Image();
+slideShowImages[0].src = "Images/Hot_Summer_Night_107th.jpg";
+slideShowImages[1] = new Image();
+slideShowImages[1].src = "Images/Hot_Summer_Night_120th.jpg";
+slideShowImages[2] = new Image();
+slideShowImages[2].src = "Images/Hot_Summer_Night-181.jpg";
+var step = 2;
+
+function sayHi(){
+	alert("Hi");
+}
+
+function changeImage(imageNumber){
+	
+	document.getElementById("slideShowButton2").style.backgroundColor = "white";
+	document.getElementById("slideShowButton1").style.backgroundColor = "white";
+	document.getElementById("slideShowButton0").style.backgroundColor = "white";
+	document.getElementById("slide").src = slideShowImages[imageNumber].src;
+	if (imageNumber === 2){
+		document.getElementById("slideShowButton2").style.backgroundColor = "gray";
+	}
+	if (imageNumber === 1){
+		document.getElementById("slideShowButton1").style.backgroundColor = "gray";
+	}
+	if (imageNumber === 0){
+		document.getElementById("slideShowButton0").style.backgroundColor = "gray";
+	}
+}
+
+function incrementImageNumber(){
+	
+	if (step<2)
+		step++;
+	else
+		step=0;
+}
+
+function startSlideShow(){
+	incrementImageNumber();
+	changeImage(step);
+	setTimeout(startSlideShow, 5000);
+}
+
+document.getElementById("slideShowButton0").style.backgroundColor = "gray";<!--THIS LINE ISNT WORKING!! UGH!
+
+</script>
+</head>
+
+<body>
+	<div class="headerBar">
+  		<h1>Lorem Ipsum</h1>
+  		<nav>
+            <ul>
+                <li><a href="#">Nulla Posuere</a></li>
+                <li><a href="#">Nec Lacus</a></li>
+                <li><a href="#">Vel Porta</a></li>
+                <li><a href="#">Sed Et Ante</a></li>
+                <li><a href="#">Ut Mi Mollis</a></li>
+                <li><a href="#">Tristique A Sed</a></li>
+        	</ul>
+    	</nav>
+    </div>
+    <div class="slideShow">
+        <img src="Images/Hot_Summer_Night_107th.jpg" id="slide" width="100%" height="800px">
+        <div class="getTickets">
+        	<a href="#">Aenean Pellentesque!</a>
+        </div>
+        <div class="slideShowButtons">
+        	<button id="slideShowButton2" onclick="changeImage(2)"></button>
+            <button id="slideShowButton1" onclick="changeImage(1)"></button>
+            <button id="slideShowButton0" onclick="changeImage(0)"></button>
+        </div>
+        <div class="slideShowArrows">
+        	<img src="Images/leftarrow.gif" class="leftArrow" onclick="#"></img>
+            <img src="Images/rightarrow.gif" class="rightArrow" onclick="#"></img>
+        </div>
+		<script type="text/javascript">
+		
+		startSlideShow();
+        
+        </script>
+	</div>
+</body>
+</html>

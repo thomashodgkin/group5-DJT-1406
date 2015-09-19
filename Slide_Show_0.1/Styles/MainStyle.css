@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+h1{
+	font-size: 50px;
+	margin: auto;
+	height: 90px;
+	line-height: 90px;
+	text-align: center;
+	width: auto;
+	font-style: italic;
+}
+
+nav ul{
+	background-color: black;
+	text-align: center;
+	
+}
+
+nav ul li{
+	height: 60px;
+	line-height: 60px;
+	list-style-type: none;
+	display: inline;
+	margin: auto;
+	padding: auto;
+	background-color: black;
+	width: 16.6666666%;
+	float: left;
+}
+
+nav ul li a{
+	color: white;
+}
+
+.slideShow img{
+	z-index: -1;
+}
+
+.slideShow .getTickets{
+	background-color: black;
+	width: 13%;
+	height: 100px;
+	line-height: 100px;
+	position: absolute;
+	top: 550px;
+	left: 43.5%;
+	text-align: center;
+	font-size: 24px;
+	border: medium solid orange;
+}
+
+.slideShow .getTickets a{
+	color: orange
+}
+
+.slideShow .slideShowButtons{
+	position: absolute;
+	top: 910px;
+	right: 10%;
+	
+}
+
+.slideShow .slideShowButtons button{
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border: 5px solid black;
+	border-radius: 50px;
+	margin-left: 10px;
+	float: right;
+}
+
+.slideShow .slideShowArrows img{
+	position: absolute;
+	top: 500px;
+	z-index: 1;
+}
+
+.slideShow .slideShowArrows .leftArrow{
+	left: 1%;
+}
+
+.slideShow .slideShowArrows .rightArrow{
+	right: 1%;
+}
+
+.slideShow .slideShowButtons button:hover{
+	cursor:pointer;
+	background-color: orange;
+}
