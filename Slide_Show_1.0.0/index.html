@@ -1,0 +1,177 @@
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<title>Lorem Ipsum</title>
+<link href="Styles/MainStyle.css" rel="stylesheet" type="text/css">
+<script src="Scripts/MainScript.js"></script>  
+<script type="text/javascript">
+
+//Global Variable Declarations
+var slideShowImages = new Array();
+slideShowImages[0] = new Image();
+slideShowImages[0].src = "Images/Hot_Summer_Night_107th.jpg";
+slideShowImages[1] = new Image();
+slideShowImages[1].src = "Images/Hot_Summer_Night_120th.jpg";
+slideShowImages[2] = new Image();
+slideShowImages[2].src = "Images/Hot_Summer_Night-181.jpg";
+//Amount of time between each slides in the Automated slide show.
+var SLIDE_SHOW_TRANSITION_INTERVAL = 5000;
+//1 less than the Total number of images in the slideShowImages array.
+var TOTAL_SLIDE_SHOW_IMAGES = 2;
+var slideShowImageNumber = TOTAL_SLIDE_SHOW_IMAGES;
+var slideShowButtonClicked = 255;
+var runSlideShowBoolean = 1;
+var arrowClicked = "undefined";
+
+//***DELETE THIS FUNCTION BEFORE PUBLISHING WEBSITE***
+function testLine(){
+	alert("This line is working properly.");
+}
+
+//change the image of the slide show to the slideShowImages[] number corresponding to the value of var slideShowImageNumber. 
+function changeSlideShowImage(slideShowImageNumber){
+	
+	//The next 3 lines set each of the slide show's button's colors to white, this is to prevent the buttons from staying gray forever once the image is displayed.
+	document.getElementById("slideShowButton2").style.backgroundColor = "white";
+	document.getElementById("slideShowButton1").style.backgroundColor = "white";
+	document.getElementById("slideShowButton0").style.backgroundColor = "white";
+	
+	//changes the image of the slide show. 
+	document.getElementById("slide").src = slideShowImages[slideShowImageNumber].src;
+	
+	//Each if statement changes the color of the button associated with the image that is currently in display.
+	if (slideShowImageNumber === 2){
+		document.getElementById("slideShowButton2").style.backgroundColor = "gray";
+	}
+	if (slideShowImageNumber === 1){
+		document.getElementById("slideShowButton1").style.backgroundColor = "gray";
+	}
+	if (slideShowImageNumber === 0){
+		document.getElementById("slideShowButton0").style.backgroundColor = "gray";
+	}
+	//
+	return slideShowImageNumber;
+}
+
+// Increments the value of slideShowImageNumber by one. If it's already at the maximum value, it is set to 0.
+function incrementSlideShowImageNumber(slideShowImageNumber){
+	
+	//
+	if (slideShowImageNumber < TOTAL_SLIDE_SHOW_IMAGES){
+		slideShowImageNumber ++;
+	}
+	else{
+		slideShowImageNumber = 0;
+	}
+	//
+	return slideShowImageNumber;
+}
+
+// Decrements the value of slideShowImageNumber by one. If it's already at 0, it is set to the maximum value.
+function decrementSlideShowImageNumber(slideShowImageNumber){
+	
+	//
+	if (slideShowImageNumber > 0){
+		slideShowImageNumber --;
+	}
+	else{
+		slideShowImageNumber = TOTAL_SLIDE_SHOW_IMAGES;
+	}
+	//
+	return slideShowImageNumber;
+}
+
+//Starts the slide show. Changes the image to the next one in the array every pre-set interval. Repeats until RunSlideShowBoolean is not 1.
+function startAutomaticSlideShow(){
+	
+	//
+	if (runSlideShowBoolean == 1){
+		slideShowImageNumber = incrementSlideShowImageNumber(slideShowImageNumber);
+		changeSlideShowImage(slideShowImageNumber);
+		setTimeout(startAutomaticSlideShow, SLIDE_SHOW_TRANSITION_INTERVAL);
+	}
+	else{
+		return;	
+	}	
+}
+
+//Changes the slide show image to whichever is associated with the button clicked.
+function changeImageByButton(slideShowButtonClicked){
+	
+	//
+	runSlideShowBoolean = 0;
+	slideShowImageNumber = slideShowButtonClicked;
+	changeSlideShowImage(slideShowImageNumber);
+}
+
+//Changes the image of the slide show to the previous or next one depending on which arrow was clicked.
+function changeImageByArrow(arrowClicked){
+	
+	//
+	runSlideShowBoolean = 0;
+	
+	//
+	if (arrowClicked === "L"){
+		slideShowImageNumber = decrementSlideShowImageNumber(slideShowImageNumber);
+	}
+	else {
+		slideShowImageNumber = incrementSlideShowImageNumber(slideShowImageNumber);
+	}
+	//
+	changeSlideShowImage(slideShowImageNumber);
+}
+
+//Changes the image of the arrows on mouse over and mouse out.
+function changeArrowImage(arrowMouseOver){
+	//
+	
+	if (arrowMouseOver === "L-OVER"){
+		document.getElementById("leftArrow").src = "Images/LEFT_ARROW_MOUSE_OVER.gif";
+	}
+	if (arrowMouseOver === "R-OVER"){
+		document.getElementById("rightArrow").src = "Images/RIGHT_ARROW_MOUSE_OVER.gif";
+	}
+	if (arrowMouseOver === "L-OUT"){
+		document.getElementById("leftArrow").src = "Images/LEFT_ARROW.gif";
+	}
+	if (arrowMouseOver === "R-OUT"){
+		document.getElementById("rightArrow").src = "Images/RIGHT_ARROW.gif";
+	}
+}
+
+</script>
+</head>
+
+<body>
+	<div class="headerBar">
+  		<h1>Lorem Ipsum</h1>
+  		<nav>
+            <ul>
+                <li><a href="#">Nulla Posuere</a></li>
+                <li><a href="#">Nec Lacus</a></li>
+                <li><a href="#">Vel Porta</a></li>
+                <li><a href="#">Sed Et Ante</a></li>
+                <li><a href="#">Ut Mi Mollis</a></li>
+                <li><a href="#">Tristique A Sed</a></li>
+        	</ul>
+    	</nav>
+    </div>
+    <div class="slideShow">
+        <img src="Images/Hot_Summer_Night_107th.jpg" id="slide" width="100%" height="800px">
+        <div class="getTickets">
+        	<a href="#">Aenean Pellentesque!</a>
+        </div>
+        <div class="slideShowButtons">
+        	<button id="slideShowButton2" onclick="changeImageByButton(2)"></button>
+            <button id="slideShowButton1" onclick="changeImageByButton(1)"></button>
+            <button id="slideShowButton0" onclick="changeImageByButton(0)"></button>
+        </div>
+        <div class="slideShowArrows">
+        	<img src="Images/LEFT_ARROW.gif" id="leftArrow" onclick="changeImageByArrow('L')" onmouseover="changeArrowImage('L-OVER')" onmouseout="changeArrowImage('L-OUT')"></img>
+            <img src="Images/RIGHT_ARROW.gif" id="rightArrow" onclick="changeImageByArrow('R')" onmouseover="changeArrowImage('R-OVER')" onmouseout="changeArrowImage('R-OUT')"></img>
+        </div>
+        <!--Starts the automated slide show-->
+		<script type="text/javascript">startAutomaticSlideShow();</script>
+	</div>
+</body>
+</html>
