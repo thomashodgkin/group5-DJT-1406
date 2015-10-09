@@ -35,20 +35,8 @@ h1 {
 	margin-bottom: 0px;
 	margin-top: 0px;
 	}
-footer {
-	background-color: #212121;
-	height: 250px;
-	color: #5C5C5C;
-	}
-#topfooter {
-	background-color: #313131;
-	height: 50px;
-	}
-#facebookfooter {
-	margin-left: auto;
-	text-align: right;
-	padding-top: 11px;
-	}
+
+
 #content1 {
 	border-top: medium solid #FFE391;
 	
@@ -62,7 +50,7 @@ footer {
 	text-align: center;
 	clear: both;
 	}
-ul {
+nav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -72,12 +60,12 @@ ul {
 }
 
 /*Create a horizontal list with spacing*/
-li {
+nav li {
 	display: inline-block;
 }
 
 /*Style for menu links*/
-li a {
+nav li a {
 	display: block;
 	min-width: 100px;
 	height: 30px;
@@ -89,13 +77,13 @@ li a {
 }
 
 /*Hover state for top level links*/
-li:hover a {
+nav li:hover a {
 	background-color: #FFE391;
 	color: #000000;	
 }
 
 /*Style for dropdown links*/
-li:hover ul a {
+nav li:hover ul a {
 	background: #f3f3f3;
 	color: #000000;
 	height: 30px;
@@ -105,31 +93,31 @@ li:hover ul a {
 }
 
 /*Hover state for dropdown links*/
-li:hover ul a:hover {
+nav li:hover ul a:hover {
 	background-color: #FFF3D4;
 	color: #000000;
 }
 
 /*Hide dropdown links until they are needed*/
-li ul {
+nav li ul {
 	display: none;
 }
 
 /*Make dropdown links vertical*/
-li ul li {
+nav li ul li {
 	display: block;
 	float: none;
 }
 
 /*Prevent text wrapping*/
-li ul li a {
+nav li ul li a {
 	width: auto;
 	min-width: 100px;
 	padding: 0 20px;
 }
 
 /*Display the dropdown on hover*/
-ul li a:hover + .hidden, .hidden:hover {
+nav ul li a:hover + .hidden, .hidden:hover {
 	display: block;
 }
 
@@ -163,6 +151,115 @@ input[type=checkbox]:checked ~ #menu{
 	padding-right: 12%;
 	text-align: center;
 	}
+	
+footer{
+	background-color: #404040;
+}
+
+#FOOTER_BAR{
+	background-color: #555555;
+	height: 40px;
+	line-height: 40px;
+}
+
+#FOOTER_SOCIAL_BAR{
+	background-color: #555555;
+	width: 66.6666%;
+	margin: auto;
+}
+
+#FOOTER_FACEBOOK{
+	
+}
+
+
+
+#FOOTER_FACEBOOK_BUTTON{
+	float: right;
+	margin-right: 5px;
+	height: 30px;
+	width: 30px;
+	padding-top: 5px;
+}
+
+#FOOTER_FACEBOOK_LINK{
+	background-color: #555555;
+	float: right;
+	margin-right: 5px;
+	color: white;
+	padding-top: 5px;
+	height: 30px;
+
+}
+
+#FOOTER_CONTENT{
+	width: 66.6666%;
+	margin: auto;
+
+	
+}
+
+#FOOTER_CONTACT{
+	background-color: #404040;
+	float: left;
+	height: 220px;
+	width: 21%;
+	padding-top: 100px;
+	padding-left: 2%;
+	padding-right: 2%;
+	color: white;
+}
+	
+
+#FOOTER_LINKS{
+	background-color: #404040;
+	float: left;
+	height: 220px;
+	width: 21%;
+	padding-top: 100px;
+	padding-left: 2%;
+	padding-right: 2%;
+}
+
+#FOOTER_LINKS ul{
+	background-color: #404040;
+}
+
+#FOOTER_LINKS ul li{
+	background-color: #404040;
+}
+
+#FOOTER_LINKS ul li a{
+	background-color: #404040;
+	color: white;
+}
+
+#FOOTER_SPONSORS{
+	background-color: #404040;
+	float: left;
+	height: 300px;
+	width: 50%;
+	padding-top: 20px;
+
+}
+
+#FOOTER_SPONSORS img{
+	background-color: white;
+	/*remove this line after adding images*/
+	width: 40%;
+	height: 90px;
+	margin-left: 6.6666%
+}
+
+#FOOTER_COPYRIGHT{
+	background-color: #404040;
+	padding-left: 10px;
+	line-height: 40px;
+	color: white;
+	
+	
+}
+
 /*Responsive Styles*/
 @media all and (max-width : 400px) {
 #logo, #contentbanner{
@@ -172,21 +269,7 @@ h1 {
 	text-align: center;
 	font-size: 2em;
 	}
-footer {
-	background-color: #212121;
-	margin-left: auto;
-	margin-right: auto;
-	height: 250px;
-	color: #5C5C5C;
-	text-align: center;
-	}
-#facebookfooter {
-	width: 50%;
-	margin-left: auto;
-	margin-right: auto;
-	color: #5C5C5C;
-	padding-top: 11px;
-	}
+
 header {
 	background-color: #000000;
 	height: auto;
@@ -226,7 +309,7 @@ header {
 		display:block;
 	}
 	/*Style for dropdown links*/
-li:hover ul a {
+nav li:hover ul a {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -253,38 +336,8 @@ li:hover ul a {
 	padding-top: 17px;
 	text-align: center;
 }
-footer {
-	background-color: #212121;
-	margin-left: auto;
-	margin-right: auto;
-	height: 250px;
-	color: #5C5C5C;
-	text-align: center;
-	}
-#facebookfooter {
-	text-align: center;
-	margin-left: auto;
-	margin-right: auto;
-	color: #5C5C5C;
-	padding-top: 11px;
-	}
-	ul {
-		position: static;
-		display: none;
-	}
-	/*Create vertical spacing*/
-	li {
-		margin-bottom: 1px;
-	}
-	/*Make all menu links full width*/
-	ul li, li a {
-	width: 100%;
-	}
-	/*Display 'show menu' link*/
-	.show-menu {
-		display:block;
-	}
-li:hover ul a {
+
+nav li:hover ul a {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -315,23 +368,23 @@ li:hover ul a {
 	padding-top: 17px;
 	text-align: center;
 }
-	ul {
+	nav ul {
 		position: static;
 		display: none;
 	}
 	/*Create vertical spacing*/
-	li {
+	nav li {
 		margin-bottom: 1px;
 	}
 	/*Make all menu links full width*/
-	ul li, li a {
+	nav ul li, nav li a {
 	width: 100%;
 	}
 	/*Display 'show menu' link*/
 	.show-menu {
 		display:block;
 	}
-li:hover ul a {
+nav li:hover ul a {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -366,23 +419,23 @@ header {
 	padding-top: 17px;
 	text-align: center;
 }
-	ul {
+	nav ul {
 		position: static;
 		display: none;
 	}
 	/*Create vertical spacing*/
-	li {
+	nav li {
 		margin-bottom: 1px;
 	}
 	/*Make all menu links full width*/
-	ul li, li a {
+	nav ul li, nav li a {
 	width: 100%;
 	}
 	/*Display 'show menu' link*/
 	.show-menu {
 		display:block;
 	}
-li:hover ul a {
+nav li:hover ul a {
 	margin-left: auto;
 	margin-right: auto;
 }
