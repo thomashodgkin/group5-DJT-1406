@@ -337,6 +337,23 @@ nav li:hover ul a {
 	text-align: center;
 }
 
+
+	nav ul {
+		position: static;
+		display: none;
+	}
+	/*Create vertical spacing*/
+	nav li {
+		margin-bottom: 1px;
+	}
+	/*Make all menu links full width*/
+	nav ul li, nav li a {
+	width: 100%;
+	}
+	/*Display 'show menu' link*/
+	.show-menu {
+		display:block;
+	}
 nav li:hover ul a {
 	margin-left: auto;
 	margin-right: auto;
