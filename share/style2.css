@@ -292,16 +292,16 @@ header {
 	padding-top: 17px;
 	text-align: center;
 	}
-	ul {
+	nav ul {
 		position: static;
 		display: none;
 	}
 	/*Create vertical spacing*/
-	li {
+	nav li {
 		margin-bottom: 1px;
 	}
 	/*Make all menu links full width*/
-	ul li, li a {
+	nav ul li, nav li a {
 	width: 100%;
 	}
 	/*Display 'show menu' link*/
