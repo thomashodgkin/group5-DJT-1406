@@ -6,6 +6,7 @@ body {
 	margin: 0px;
 	min-width: 400px;
 	background-color: #000000;
+	color: #FFE391;
 	}
 header {
 	background-color: #000000;
@@ -16,7 +17,7 @@ header {
 	padding-right: 0.3em;
 	}
 .content {
-	width: 900px;
+	width: 980px;
 	margin-top: 36px;
 	margin-left: auto;
 	margin-right: auto;
@@ -50,6 +51,7 @@ footer {
 	}
 #content1 {
 	border-top: medium solid #FFE391;
+	
 	}
 #content2 {
 	border-top: medium solid #FFE391;
@@ -58,6 +60,7 @@ footer {
 	border-top: medium solid #FFE391;
 	padding-top: 17px;
 	text-align: center;
+	clear: both;
 	}
 ul {
 	list-style-type: none;
@@ -150,8 +153,16 @@ input[type=checkbox]{
 input[type=checkbox]:checked ~ #menu{
 	display: block;
 }
-
-
+#upcoming1 {
+	float: left;
+	padding-left: 12%;
+	text-align: center;
+	}
+#upcoming2 {
+	float: right;
+	padding-right: 12%;
+	text-align: center;
+	}
 /*Responsive Styles*/
 @media all and (max-width : 400px) {
 #logo, #contentbanner{
@@ -393,5 +404,13 @@ h1 {
 	margin-top: 36px;
 	margin-left: auto;
 	margin-right: auto;
+	}
+#upcoming1 {
+	float: left;
+	padding-left: 12%;
+	text-align: center;
+	}
+#upcoming2 {
+	width: 0%;	
 	}
 }
