@@ -199,6 +199,7 @@ footer{
 	color: white;
 	padding-top: 5px;
 	height: 30px;
+	
 }
 
 #FOOTER_FACEBOOK_LINK:hover{
@@ -209,9 +210,10 @@ footer{
 	width: 66.6666%;
 	max-width: 980px;
 	margin: auto;
-	height: 340px;
+	height: auto;
 	
 }
+
 
 #FOOTER_CONTENT_BLOCK_1{
 
@@ -221,13 +223,12 @@ footer{
 
 	float: left;
 	height: 220px;
-	width: 19%;
-	max-width: 205px;
+	width: 27.3333%;
 	padding-top: 100px;
 	color: white;
-	background-color: red;
 	padding-left: 3%;
 	padding-right: 3%;
+	text-align: left;
 }
 	
 
@@ -235,10 +236,8 @@ footer{
 
 	float: left;
 	height: 220px;
-	width: 19%;
-	max-width: 205px;
+	width: 27.3333%;
 	padding-top: 100px;
-	background-color: green;
 	padding-left: 3%;
 	padding-right: 3%;
 	text-align: center;
@@ -262,9 +261,16 @@ footer{
 	text-decoration: underline;
 }
 
-#FOOTER_SPONSORS{
-	background-color: blue;
+#FOOTER_EMPTY_SPACE{
+	padding-top: 100px;
 	float: left;
+	height: 220px;
+	padding-left: 3%;
+	padding-right: 3%;
+	width: 27.3333%;
+}
+
+#FOOTER_SPONSORS{
 	height: 300px;
 	width: 50%;
 	max-width: 490px;
@@ -521,8 +527,7 @@ h1 {
 /*Responsive Footer*/
 
 
-@media all and (min-width : 0px) and (max-width : 640px) {
-	
+@media all and (min-width : 0px) and (max-width : 800px) {
 	#FOOTER_CONTENT{
 		width: 100%;
 	}
@@ -546,17 +551,25 @@ h1 {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+	#FOOTER_EMPTY_SPACE{
+		floct: none;
+		height: 220px;
+		width: 94%;
+		max-width: 94%;
+		padding-top: 100px;
+		margin: auto;
+		padding-left: 3%;
+		padding-right: 3%;
+		display: none;
+	}
 	#FOOTER_SPONSORS{
 		width: 100%;
 		margin: auto;
-		float:none;
 	}
 }
 
-@media all and (min-width : 640px) and (max-width : 1450px) {
-	#FOOTER_CONTENT{
-		height: 640px;
-	}
+@media all and (min-width : 800px) and (max-width : 1200px) {
+
 	#FOOTER_CONTENT_BLOCK_1{
 		margin: auto;
 		width: 100%;
@@ -579,10 +592,20 @@ h1 {
 		padding-left: 3%;
 		padding-right: 3%;
 	}
+		#FOOTER_EMPTY_SPACE{
+		floct: none;
+		height: 220px;
+		width: 94%;
+		max-width: 94%;
+		padding-top: 100px;
+		margin: auto;
+		padding-left: 3%;
+		padding-right: 3%;
+		display: none;
+	}
 	#FOOTER_SPONSORS{
 		width: 100%;
 		margin: auto;
-		float:none;
-		
+	
 	}
 }
