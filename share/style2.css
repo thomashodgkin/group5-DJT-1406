@@ -57,9 +57,13 @@ h1 {
 	overflow-x: auto;
 	width: 100%;
 	padding-top: 16px;
+	margin-top: 16px;
 	}
 #content2 {
 	border-top: medium solid #FFE080;
+	overflow-y: auto;
+	padding-top: 16px;
+	margin-top: 16px;
 	}
 #book {
 	border-top: medium solid #FFE080;
@@ -162,6 +166,18 @@ input[type=checkbox]:checked ~ #menu{
 	border-width: medium;
 	border-style: double;
 }
+.floatleft {
+	float: left;
+	margin-right: 1em;
+	border-width: medium;
+	border-style: double;
+	}
+.floatright{
+	float: right;
+	margin-left: 1em;
+	border-width: medium;
+	border-style: double;
+	}
 #upcoming1 {
 	float: left;
 	width: 300px;
@@ -196,12 +212,7 @@ footer{
 
 #FOOTER_FACEBOOK{
 	height: 40px;
-
-	
 }
-
-
-
 #FOOTER_FACEBOOK_BUTTON{
 	float: right;
 	margin-right: 5px;
@@ -349,7 +360,12 @@ footer{
 	margin-left: auto;
 	margin-right: auto;
 	}
-
+#whatson_content {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y: auto;
+	}
 
 /*Responsive Styles*/
 @media all and (max-width : 400px) {
