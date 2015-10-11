@@ -2,24 +2,12 @@
 /*Strip the ul of padding and list styling*/
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	width: 100%;
 	margin: 0px;
 	min-width: 400px;
 	background-color: #000000;
-	color: #FFE080;
+	color: #FFE391;
 	}
-
-	
-ul{
-	list-style: none;
-	padding-left: 0px;
-}
-
-a{
-	text-decoration: none;
-	color: #FFE080;
-
-}
-
 header {
 	background-color: #000000;
 	height: 100%;
@@ -35,12 +23,10 @@ header {
 	margin-right: auto;
 	}
 #contentbanner {
-	margin-left: auto;
-	margin-right: auto;
 	}
 h1 {
 	font-family: 'Pinyon Script', cursive;
-	color: #FFE080;
+	color: #FFE391;
 	background-color: #000000;
 	font-size: 5em;
 	padding-top: 16px;
@@ -52,21 +38,17 @@ h1 {
 
 
 #content1 {
-	border-top: medium solid #FFE080;
-	overflow-y: auto;
-	overflow-x: auto;
-	width: 100%;
-	padding-top: 16px;
+	border-top: medium solid #FFE391;
+	
 	}
 #content2 {
-	border-top: medium solid #FFE080;
+	border-top: medium solid #FFE391;
 	}
 #book {
-	border-top: medium solid #FFE080;
-	padding-top: 16px;
+	border-top: medium solid #FFE391;
+	padding-top: 17px;
 	text-align: center;
 	clear: both;
-	padding-bottom: 16px;
 	}
 nav ul {
 	list-style-type: none;
@@ -89,29 +71,30 @@ nav li a {
 	height: 30px;
 	text-align: center;
 	line-height: 30px;
-	color: #FFE080;
+	color: #FFE391;
 	background-color: #000000;
 	text-decoration: none;
 }
 
 /*Hover state for top level links*/
 nav li:hover a {
-	background-color: #FFE080;
+	background-color: #FFE391;
 	color: #000000;	
 }
 
 /*Style for dropdown links*/
 nav li:hover ul a {
-	background-color: #F0F0F0;
+	background: #f3f3f3;
 	color: #000000;
 	height: 30px;
 	line-height: 30px;
 	width: 7em;
+
 }
 
 /*Hover state for dropdown links*/
 nav li:hover ul a:hover {
-	background-color: #FFF0C0;
+	background-color: #FFF3D4;
 	color: #000000;
 }
 
@@ -143,7 +126,7 @@ nav ul li a:hover + .hidden, .hidden:hover {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-decoration: none;
 	color: #000000;
-	background: #FFE080;
+	background: #FFE391;
 	text-align: center;
 	padding: 10px 0;
 	display: none;
@@ -158,27 +141,19 @@ input[type=checkbox]{
 input[type=checkbox]:checked ~ #menu{
 	display: block;
 }
-.upcomingimages {
-	border-width: medium;
-	border-style: double;
-}
 #upcoming1 {
 	float: left;
-	width: 300px;
-	text-align: center;
 	padding-left: 12%;
+	text-align: center;
 	}
 #upcoming2 {
 	float: right;
-	width: 300px; 
 	padding-right: 12%;
 	text-align: center;
 	}
-
+	
 footer{
-	background-color: #2B2B2B;
-	height: 260px;
-	color: #878787;
+	background-color: #404040;
 }
 
 #FOOTER_BAR{
@@ -188,15 +163,12 @@ footer{
 }
 
 #FOOTER_SOCIAL_BAR{
+	background-color: #555555;
 	width: 66.6666%;
-	max-width: 980px;
 	margin: auto;
-	height: 200px;
 }
 
 #FOOTER_FACEBOOK{
-	height: 40px;
-
 	
 }
 
@@ -217,48 +189,36 @@ footer{
 	color: white;
 	padding-top: 5px;
 	height: 30px;
-	
-}
 
-#FOOTER_FACEBOOK_LINK:hover{
-	text-decoration: underline;
 }
 
 #FOOTER_CONTENT{
 	width: 66.6666%;
-	max-width: 980px;
 	margin: auto;
-	height: auto;
+
 	
 }
 
-
-#FOOTER_CONTENT_BLOCK_1{
-
-}
-
 #FOOTER_CONTACT{
-
+	background-color: #404040;
 	float: left;
 	height: 220px;
-	width: 27.3333%;
+	width: 21%;
 	padding-top: 100px;
+	padding-left: 2%;
+	padding-right: 2%;
 	color: white;
-	padding-left: 3%;
-	padding-right: 3%;
-	text-align: left;
 }
 	
 
 #FOOTER_LINKS{
-
+	background-color: #404040;
 	float: left;
 	height: 220px;
-	width: 27.3333%;
+	width: 21%;
 	padding-top: 100px;
-	padding-left: 3%;
-	padding-right: 3%;
-	text-align: center;
+	padding-left: 2%;
+	padding-right: 2%;
 }
 
 #FOOTER_LINKS ul{
@@ -274,35 +234,21 @@ footer{
 	color: white;
 }
 
-#FOOTER_LINKS ul li a:hover{
-	color: #FFE080;
-	text-decoration: underline;
-}
-
-#FOOTER_EMPTY_SPACE{
-	padding-top: 100px;
-	float: left;
-	height: 220px;
-	padding-left: 3%;
-	padding-right: 3%;
-	width: 27.3333%;
-}
-
 #FOOTER_SPONSORS{
+	background-color: #404040;
+	float: left;
 	height: 300px;
 	width: 50%;
-	max-width: 490px;
 	padding-top: 20px;
-	display: inline;
-	text-align: center;
 
 }
 
 #FOOTER_SPONSORS img{
 	background-color: white;
 	/*remove this line after adding images*/
-	margin-left: 5px;
-
+	width: 40%;
+	height: 90px;
+	margin-left: 6.6666%
 }
 
 #FOOTER_COPYRIGHT{
@@ -310,50 +256,12 @@ footer{
 	padding-left: 10px;
 	line-height: 40px;
 	color: white;
-	width: 100%;
-	max-width: 980px;
-	margin: auto;
 	
 	
 }
-#footerinfo {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 980px;
-	padding-left: 0px;
-	}
-#footercontact {
-	float: left;
-	width: 27%;
-	padding-left: 10%;
-}
-#footerlink1 {
-	float: left;
-	width: 20%;
-}
-#footerlink2 {
-	float: left;
-	width: 0%;
-}
-#footerlink3 {
-	float: right;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 18%;
-}
-#copywrite {
-	width: 80%;
-	border-top: 2px solid #555555;
-	clear: both;
-	margin-top: 0px;
-	margin-left: auto;
-	margin-right: auto;
-	}
-
 
 /*Responsive Styles*/
 @media all and (max-width : 400px) {
-
 #logo, #contentbanner{
 	display: none;
 		}
@@ -370,35 +278,17 @@ header {
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
-	color: #FFE080;
+	color: #FFE391;
 	text-align: center;
 	}
 #content1 {
-	padding-bottom: 16px;
-	}
-.upcomingimages {
-	float: left;
-	width: 200px;
-	height: 200px;
-	}
-#upcoming1 {
-	position: relative;
-	float: left;
-	padding: 0px;
-	margin-left: 10%;
-	margin-bottom: 16px;
-	}
-#upcoming2 {
-	position: relative;
-	float: left;
-	padding: 0px;
-	margin-left: 10%;
+	border-top: medium solid #FFE391;
 	}
 #content2 {
-	border-top: medium solid #FFE080;
+	border-top: medium solid #FFE391;
 	}
 #book {
-	border-top: medium solid #FFE080;
+	border-top: medium solid #FFE391;
 	padding-top: 17px;
 	text-align: center;
 	}
@@ -426,58 +316,27 @@ nav li:hover ul a {
 	.content {
 		width: 100%;
 		}
-#footerlink1 {
-	display: none;	
-	}
-#footerlink2 {
-	display: none;	
-	}
-#footerlink3 {
-	float: right;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 30%;
-}
 	}
 @media all and (min-width : 401px) and (max-width : 567px) {
-h1  {
+	h1  {
 	text-align: center;
 	font-size: 3em;
 	}
-#logo, #contentbanner{
+	#logo, #contentbanner{
 	display: none;
 		}
-#content1 {
-	padding-bottom: 16px;
-	}
-.upcomingimages {
-	float: left;
-	width: 200px;
-	height: 200px;
-	}
-#upcoming1 {
-	position: relative;
-	float: left;
-	padding: 0px;
-	margin-left: 20%;
-	margin-bottom: 16px;
-	}
-#upcoming2 {
-	position: relative;
-	float: left;
-	padding: 0px;
-	margin-left: 20%;
+	#content1 {
+	border-top: medium solid #FFE391;
 	}
 #content2 {
-	border-top: medium solid #FFE080;
+	border-top: medium solid #FFE391;
 	}
 #book {
-	border-top: medium solid #FFE080;
+	border-top: medium solid #FFE391;
 	padding-top: 17px;
 	text-align: center;
 }
 
-/*navigtion*/
 
 	nav ul {
 		position: static;
@@ -502,18 +361,6 @@ nav li:hover ul a {
 	.content {
 		width: 100%;
 		}
-#footerlink1 {
-	display: none;	
-	}
-#footerlink2 {
-	display: none;	
-	}
-#footerlink3 {
-	float: right;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	width: 26%;
-}
 }
 @media all and (min-width : 568px) and (max-width : 700px) {
 	h1  {
@@ -528,29 +375,13 @@ nav li:hover ul a {
 	width: 30px;
 	}
 #content1 {
-	border-top: medium solid #FFE080;
+	border-top: medium solid #FFE391;
 	}
 #content2 {
-	border-top: medium solid #FFE080;
-	}
-.upcomingimages {
-
-	}
-#upcoming1 {
-	float: left;
-	padding: 0px;
-	margin-left: 30%;
-	position: relative;
-	width: 300px;
-	}
-#upcoming2 {
-	position: relative;
-	float: left;
-	padding: 0px;
-	margin-left: 30%;
+	border-top: medium solid #FFE391;
 	}
 #book {
-	border-top: medium solid #FFE080;
+	border-top: medium solid #FFE391;
 	padding-top: 17px;
 	text-align: center;
 }
@@ -588,33 +419,20 @@ h1  {
 	width: 38px;
 	}
 #contentbanner {
-	width: 100%;
-	height: auto;
+		text-align: center;
 	}
 header {
 	background-color: #000000;
 	height: auto;
 	}
 #content1 {
-	border-top: medium solid #FFE080;
-	clear: both;
+	border-top: medium solid #FFE391;
 	}
-.upcomingimages {
-
-	}
-#upcoming1 {
-	padding: 0px;
-	margin-left: 30%;
-	position: relative;
-	}
-#upcoming2 {
-	position: relative;
-	float: left;
-	padding: 0px;
-	margin-left: 30%;
+#content2 {
+	border-top: medium solid #FFE391;
 	}
 #book {
-	border-top: medium solid #FFE080;
+	border-top: medium solid #FFE391;
 	padding-top: 17px;
 	text-align: center;
 }
@@ -657,122 +475,12 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	}
-#content1 {
-	border-top: medium solid #FFE080;
-	overflow-y: auto;
-	overflow-x: auto;
-	}
-#contentbanner {
-	width: 100%;
-	height: auto;
-	}
 #upcoming1 {
 	float: left;
-	padding-left: 10%;
+	padding-left: 12%;
 	text-align: center;
 	}
 #upcoming2 {
-	padding-right: 10%;
-	text-align: center;
+	width: 0%;	
 	}
 }
-@media all and (min-width : 901px) and (max-width : 980px) {
-.content {
-	width: 901px;
-	margin-top: 36px;
-	margin-left: auto;
-	margin-right: auto;
-	}
-#contentbanner {
-	width: 100%;
-	height: auto;
-	}
-	}
-	
-	
-
-/*Responsive Footer*/
-
-
-/*1@media all and (min-width : 0px) and (max-width : 800px) {
-	#FOOTER_CONTENT{
-		width: 100%;
-	}
-	#FOOTER_CONTACT{
-		float: none;
-		height: 220px;
-		width: 80%;
-		max-width: 80%;
-		padding-top: 100px;
-		margin: auto;
-		padding-left: 3%;
-		padding-right: 3%;
-	}
-	#FOOTER_LINKS{
-		floct: none;
-		height: 220px;
-		width: 94%;
-		max-width: 94%;
-		padding-top: 100px;
-		margin: auto;
-		padding-left: 3%;
-		padding-right: 3%;
-	}
-	#FOOTER_EMPTY_SPACE{
-		floct: none;
-		height: 220px;
-		width: 94%;
-		max-width: 94%;
-		padding-top: 100px;
-		margin: auto;
-		padding-left: 3%;
-		padding-right: 3%;
-		display: none;
-	}
-	#FOOTER_SPONSORS{
-		width: 100%;
-		margin: auto;
-	}
-}
-
-@media all and (min-width : 800px) and (max-width : 1200px) {
-
-	#FOOTER_CONTENT_BLOCK_1{
-		margin: auto;
-		width: 100%;
-	}
-	#FOOTER_CONTACT{
-		height: 220px;
-		width: 44%;
-		max-width: 44%;
-		padding-top: 100px;
-		margin: auto;
-		padding-left: 3%;
-		padding-right: 3%;
-	}
-	#FOOTER_LINKS{
-		height: 220px;
-		width: 44%;
-		max-width: 44%;
-		padding-top: 100px;
-		margin: auto;
-		padding-left: 3%;
-		padding-right: 3%;
-	}
-		#FOOTER_EMPTY_SPACE{
-		floct: none;
-		height: 220px;
-		width: 94%;
-		max-width: 94%;
-		padding-top: 100px;
-		margin: auto;
-		padding-left: 3%;
-		padding-right: 3%;
-		display: none;
-	}
-	#FOOTER_SPONSORS{
-		width: 100%;
-		margin: auto;
-	
-	}
-}*/
