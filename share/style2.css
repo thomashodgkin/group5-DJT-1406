@@ -1,5 +1,5 @@
 @charset "utf-8";
-/*Strip the ul of padding and list styling*/
+
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin: 0px;
@@ -33,6 +33,7 @@ header {
 	margin-top: 36px;
 	margin-left: auto;
 	margin-right: auto;
+	text-align: center;
 	}
 #contentbanner {
 	margin-left: auto;
@@ -54,7 +55,6 @@ h1 {
 #content1 {
 	border-top: medium solid #FFE080;
 	overflow-y: auto;
-	overflow-x: auto;
 	width: 100%;
 	padding-top: 16px;
 	margin-top: 16px;
@@ -72,6 +72,74 @@ h1 {
 	clear: both;
 	padding-bottom: 16px;
 	}
+	
+/*hoverbox*/
+.hoverbox {
+	cursor: default;
+	list-style: none;
+}
+
+.hoverbox a {
+	cursor: default;
+}
+
+.hoverbox a .preview {
+	display: none;
+}
+
+.hoverbox a:hover .preview {
+	display: block;
+	position: absolute;
+	top: -68%;
+	z-index: 1;
+	left: -70%;
+}
+
+.hoverbox img {
+	background: #fff;
+	border: 1px solid #FFE080;
+	color: #FFE080;
+	padding-top: 1px;
+	padding-right: 1px;
+	padding-left: 1px;
+	padding-bottom: 1px;
+	vertical-align: top;
+	width: 100px;
+	height: 75px;
+}
+
+.hoverbox li {
+	background: #eee;
+	border-color: #FFE080;
+	border: 1px solid #FFE080;
+	color: inherit;
+	display: inline;
+	float: left;
+	margin-top: 3px;
+	margin-right: 3px;
+	margin-left: 3px;
+	margin-bottom: 3px;
+	position: relative;
+}
+
+.hoverbox .preview {
+	border-color: #000;
+	width: 300px;
+	height: 200px;
+}
+	/*endhoverbox*/
+	
+#gallery {
+	overflow-y: auto;
+	padding-left: 20%;
+	padding-top: 34px;
+	padding-right: 20%;
+	padding-bottom: 68px;
+	}
+
+/*nav*/
+
+
 nav ul {
 	list-style-type: none;
 	margin: 0;
@@ -97,7 +165,9 @@ nav li a {
 	background-color: #000000;
 	text-decoration: none;
 }
-
+nav a.thispage {
+	border-bottom: medium solid #FFE080;
+	}
 /*Hover state for top level links*/
 nav li:hover a {
 	background-color: #FFE080;
@@ -110,7 +180,8 @@ nav li:hover ul a {
 	color: #000000;
 	height: 30px;
 	line-height: 30px;
-	width: 7em;
+	width: 11em;
+	margin-left: -3em;
 }
 
 /*Hover state for dropdown links*/
@@ -161,6 +232,14 @@ input[type=checkbox]{
 /*Show menu when invisible checkbox is checked*/
 input[type=checkbox]:checked ~ #menu{
 	display: block;
+}
+#contactleft {
+	width: 50%;
+	float: left;
+}
+#contactright {
+	width: 50%;
+	float: right;
 }
 .upcomingimages {
 	border-width: medium;
@@ -234,99 +313,6 @@ footer{
 #FOOTER_FACEBOOK_LINK:hover{
 	text-decoration: underline;
 }
-
-#FOOTER_CONTENT{
-	width: 66.6666%;
-	max-width: 980px;
-	margin: auto;
-	height: auto;
-	
-}
-
-
-#FOOTER_CONTENT_BLOCK_1{
-
-}
-
-#FOOTER_CONTACT{
-
-	float: left;
-	height: 220px;
-	width: 27.3333%;
-	padding-top: 100px;
-	color: white;
-	padding-left: 3%;
-	padding-right: 3%;
-	text-align: left;
-}
-	
-
-#FOOTER_LINKS{
-
-	float: left;
-	height: 220px;
-	width: 27.3333%;
-	padding-top: 100px;
-	padding-left: 3%;
-	padding-right: 3%;
-	text-align: center;
-}
-
-#FOOTER_LINKS ul{
-	background-color: #404040;
-}
-
-#FOOTER_LINKS ul li{
-	background-color: #404040;
-}
-
-#FOOTER_LINKS ul li a{
-	background-color: #404040;
-	color: white;
-}
-
-#FOOTER_LINKS ul li a:hover{
-	color: #FFE080;
-	text-decoration: underline;
-}
-
-#FOOTER_EMPTY_SPACE{
-	padding-top: 100px;
-	float: left;
-	height: 220px;
-	padding-left: 3%;
-	padding-right: 3%;
-	width: 27.3333%;
-}
-
-#FOOTER_SPONSORS{
-	height: 300px;
-	width: 50%;
-	max-width: 490px;
-	padding-top: 20px;
-	display: inline;
-	text-align: center;
-
-}
-
-#FOOTER_SPONSORS img{
-	background-color: white;
-	/*remove this line after adding images*/
-	margin-left: 5px;
-
-}
-
-#FOOTER_COPYRIGHT{
-	background-color: #404040;
-	padding-left: 10px;
-	line-height: 40px;
-	color: white;
-	width: 100%;
-	max-width: 980px;
-	margin: auto;
-	
-	
-}
 #footerinfo {
 	margin-left: auto;
 	margin-right: auto;
@@ -366,6 +352,49 @@ footer{
 	margin-right: auto;
 	overflow-y: auto;
 	}
+#gallery_content {
+	display: flex;                         /*flex and justify sourced from https://css-tricks.com/equidistant-objects-with-css*/
+	justify-content: space-between;			/*flex and justify sourced from https://css-tricks.com/equidistant-objects-with-css*/
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 36px;
+	margin-bottom: 52px;
+}
+#gallery_content1 {
+	text-align: center;
+	overflow-y: auto;
+	width: 200px;
+	float: left;
+	border-style: double;
+	padding-top: 16px;
+	padding-right: 16px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+}
+
+#gallery_content2 {
+	text-align: center;
+	width: 200px;
+	overflow-y: auto;
+	float: left;
+	border-style: double;
+	padding-top: 16px;
+	padding-right: 16px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+}
+#gallery_content3 {
+	width: 200px;
+	text-align: center;
+	float: left;
+	border-style: double;
+	padding-top: 16px;
+	padding-right: 16px;
+	padding-bottom: 16px;
+	padding-left: 16px;
+}
+
 
 /*Responsive Styles*/
 @media all and (max-width : 400px) {
