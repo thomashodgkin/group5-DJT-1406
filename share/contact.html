@@ -63,13 +63,34 @@
     <div class="content">&nbsp;
     	<img src="bg (1).jpg" id="contentbanner" width="980px" height="265" alt="The orchestra"/> 
         <!--content items all go in these divs, cut and paste with incremental numbers to keep track of-->
-        	<div id="content1"> 
-				<div id="contactleft"> First name 
-              </div>
-                <div id="contactright"> 
-                </div>
-
-      </div>
+		<div id="content1"> 
+            <form id="Enquiry_Form">
+                <h2>Contact us:</h2>
+                <p>
+                  <label id="Label_1">Full Name:</label>
+                <br>
+                  <input id="Input_1" type="text" name="Full Name" size="35" maxlength="35" placeholder="Last, First" oninput="validateInput(this, 'anything', 'Label_1', 'none');"/>
+                </p>
+                <p>
+                  <label id="Label_2">Email:</label>
+                <br>
+                  <input id="Input_2" type="email" name="Email" size="35" maxlength="35" placeholder="someone123@gmail.com" oninput="validateInput(this, 'email', 'Label_2', 'none');"/>
+                </p>
+                <p>
+                  <label id="Label_3">Subject:</label>
+                <br>
+                  <input id="Input_3" type="text" name="Subject" size="35" maxlength="35" placeholder="Subject of message" oninput="validateInput(this, 'anything', 'Label_3', 'none');"/>
+                </p>
+              <p>
+                <label id="Label_4">Message:</label>
+                <br>
+                <textarea id="Input_4" name="Message" rows="5" cols="50" placeholder="Enter message here..." oninput="validateInput(this, 'message', 'Label_4', 'none');"></textarea>
+              </p>
+                <p>
+                  <input type="submit" name="Submit" value="submit" onclick="return submitForm();">
+                </p>
+            </form>
+        </div>
         	<!--  			////////////////only use if needed////////////////
             <div id="content2"> 		
             	<p>Highlight up coming
