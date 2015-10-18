@@ -42,6 +42,18 @@ header {
 	margin-left: auto;
 	margin-right: auto;
 	}
+#panel,#panel1, #panel2, #panel3, #panel4, #panel5, #panel6, #panel7, #panel8, #flip,#flip1, #flip2, #flip3, #flip4, #flip5, #flip6, #flip7, #flip8 {
+    padding: 4px;
+    text-align: left;
+    border: solid 1px #c3c3c3;
+	
+}
+
+	
+#panel, #panel1, #panel2, #panel3, #panel4, #panel5, #panel6, #panel7, #panel8 {
+    padding: 50px;
+    display: none;
+}
 h1 {
 	font-family: 'Pinyon Script', cursive;
 	color: #FFE080;
@@ -74,7 +86,11 @@ h1 {
 	padding-top: 16px;
 	margin-top: 16px;
 	}
-
+#content img {
+	float:left;
+	margin: 10px;
+}
+	
 #book {
 	border-top: medium solid #FFE080;
 	padding-top: 16px;
