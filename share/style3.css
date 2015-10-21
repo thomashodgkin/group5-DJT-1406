@@ -10,6 +10,7 @@ body {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
+	overflow-x: hidden;
 	}	
 ul{
 	list-style: none;
@@ -252,12 +253,16 @@ input[type=checkbox]:checked ~ #menu{
 	margin-right: 1em;
 	border-width: medium;
 	border-style: double;
+	margin-bottom: 1em;
+	margin-left: 1em;
 	}
 .floatright{
 	float: right;
 	margin-left: 1em;
 	border-width: medium;
 	border-style: double;
+	margin-bottom: 1em;
+	margin-right: 1em;
 	}
 .upcoming1 {
 	text-align: center;
@@ -319,13 +324,15 @@ footer{
 	width: 27%;
 	padding-left: 10%;
 	}
-#footerlink1 {
+#footerlink1, #footerlink2 {
 	float: left;
-	width: 20%;
+	width: 13%;
+	padding-left: 1%;
+	padding-right: 0px;
+	margin-right: 7%;
 	}
-#footerlink2 {
-	float: left;
-	width: 0%;
+#footerlink1 li:hover, #footerlink2 li:hover {
+	padding-left: 6%;
 	}
 #footerlink3 {
 	float: right;
@@ -333,6 +340,17 @@ footer{
 	margin-bottom: 20px;
 	width: 18%;
 	}
+#linktotop {
+	visibility: collapse;
+	float: left;
+	text-align: center;
+	width: 0px;
+	}
+.thispagefooter {
+	margin-left: 0%;
+	text-decoration: underline;
+	}
+
 #copyright {
 	width: 80%;
 	border-top: 2px solid #555555;
@@ -470,6 +488,13 @@ nav li:hover ul a {
 	margin-bottom: 20px;
 	width: 30%;
 	}
+#linktotop {
+	float: left;
+	visibility: visible;
+	margin-left: 11%;
+	text-align: center;
+	width: auto;
+	}
 #gallery_content {
 	margin-left: auto;
 	margin-right: auto;
@@ -491,7 +516,7 @@ nav li:hover ul a {
 	left: auto;
 	margin-left: 4px;
 	margin-bottom: 4px;
-}
+	}	
 }
 
 @media all and (min-width : 587px) and (max-width : 786px) {
