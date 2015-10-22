@@ -18,13 +18,9 @@
 		<label for="show-menu" class="show-menu">Menu</label>
         <input type="checkbox" id="show-menu" role="button">
 	<ul id="menu">   <!-- code originally sourced from http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/ for the menu buttons html and css-->
-    	<li><a href="index.html" >Home</a></li>
+    	<li><a href="index.html" class="thispage">Home</a></li>
 		<li>
-<<<<<<< HEAD
-			<a href="aboutUs.html">About</a>
-=======
-			<a href="aboutHistory.html">About</a>
->>>>>>> origin/master
+			<a href="aboutHistory.html">About </a>
 			<ul class="hidden">
 				<li><a href="aboutSpecialGuest.html">Special Guests</a></li>
 				<li><a href="aboutLifeMembers.html">Life Members</a></li>
@@ -32,16 +28,18 @@
 			</ul>
 		</li>
 		<li>
-			<a href="education.html">Education</a>
+			<a href="#">Education</a>
 			<ul class="hidden">
-				<li><a href="education.html#theOrchestra">The Orchestra</a></li>
-				<li><a href="education.html#conductor">The Conductor</a></li>
-				<li><a href="education.html#instruments">Instruments</a></li>
+				<li><a href="theOrchestra.html">The Orchestra</a></li>
+				<li><a href="theConductor.html">The Conductor</a></li>
+				<li><a href="instruments.html">Instruments</a></li>
+                <li><a href="concertEtiquette.html">Concert Etiquette</a></li>
 			</ul>
 		</li>
         <li>
 			<a href="whatson.html">What's on</a>
 			<ul class="hidden">
+				<li><a href="events.html">Events</a></li>
 			</ul>
 		</li>
         <li>
@@ -60,41 +58,23 @@
 				<li><a href="#">Support Us</a></li>
 			</ul>
         </li>
-		<li><a href="contact.html"class="thispage">Contact</a></li>
+		<li><a href="contact.html">Contact</a></li>
 	</ul>
     </nav> <!--the end of the menu-->
  		<div id="banner">&nbsp;
     	<img src="bg (1).jpg" width="100%" height="" alt="The orchestra"/> 
         </div>
         <!--content items all go in these divs, cut and paste with incremental numbers to keep track of-->
-		<div id="content1"> 
-            <form id="Enquiry_Form">
-                <h2>Contact us:</h2>
-                <p>
-                  <label id="Label_1">Full Name:</label>
-                <br>
-                  <input id="Input_1" type="text" name="Full Name" size="35" maxlength="35" placeholder="Last, First" oninput="validateInput(this, 'anything', 'Label_1', 'none');"/>
-                </p>
-                <p>
-                  <label id="Label_2">Email:</label>
-                <br>
-                  <input id="Input_2" type="email" name="Email" size="35" maxlength="35" placeholder="someone123@gmail.com" oninput="validateInput(this, 'email', 'Label_2', 'none');"/>
-                </p>
-                <p>
-                  <label id="Label_3">Subject:</label>
-                <br>
-                  <input id="Input_3" type="text" name="Subject" size="35" maxlength="35" placeholder="Subject of message" oninput="validateInput(this, 'anything', 'Label_3', 'none');"/>
-                </p>
-              <p>
-                <label id="Label_4">Message:</label>
-                <br>
-                <textarea id="Input_4" name="Message" rows="5" cols="50" placeholder="Enter message here..." oninput="validateInput(this, 'message', 'Label_4', 'none');"></textarea>
-              </p>
-                <p>
-                  <input type="submit" name="Submit" value="submit" onclick="return submitForm();">
-                </p>
-            </form>
-        </div>
+            <div id="content1">
+
+            	<div class="upcoming1"> <a href="https://au.patronbase.com/_TVCC/Productions/0886/Performances" target="_blank"><img src="Images/upcoming1.jpg" width="300" height="300" alt="Upcoming photo" class="upcomingimages"/><p>Saturday November 7th <br>
+            	at the Townsville Civic Theatre... <em>More</em></p>
+            	</a></div>  
+                <div class="upcoming2"> <a href="https://au.patronbase.com/_TVCC/Productions/0886/Performances" target="_blank"><img src="Images/upcoming2.jpg" width="300" height="300" alt="Upcoming photo" class="upcomingimages"/><p>Saturday November 7th <br>
+                at the Townsville Civic Theatre... <em>More</em></p>
+                </a></div>      
+
+            </div>
         	<!--  			////////////////only use if needed////////////////
             <div id="content2"> 		
             	<p>Highlight up coming
@@ -103,6 +83,7 @@
       <div id="book"> 
            	<a href="https://au.patronbase.com/_TVCC/Productions/0886/Performances" target="_blank"><img src="ticketshop_logo_small.jpg" width="354" height="76" alt=""/></a> 
       </div>
+    </div>
 <footer>
 
     <div id="FOOTER_BAR">
@@ -114,23 +95,22 @@
                 <a id="FOOTER_FACEBOOK_LINK" href="https://www.facebook.com/nqorchestra?ref=profile" target="_blank" >
                     Find us on Facebook
                 </a>
-          </div>
+            </div>
       </div>
     </div>
-<div id="footerinfo">
+    <div id="footerinfo">
     <div id="footercontact"><p>Barrier Reef Orchestra<br>07 4722 2789<br>Box 576, Townsville<br>QLD 4812.</p></div>
     <div id="footerlink1"><ul>
     						<li><a href="index.html">Home</a></li>
-                            <li><a href="aboutHistory.html">About</a></li>
-                            <li><a href="education.html">Education</a></li>
-                            <li><a href="whatson.html">What's on</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Education</a></li>
+                            <li><a href="#">What's on</a></li>
                          </ul>
                          </div>
-     <div id="linktotop"> <a href="#"><p>Back<br>to<br>top</p></a></div>        
      <div id="footerlink2"><ul>
-                            <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="supporters.html">Supporters</a></li>
-                            <li><a href="contact.html" class="thispagefooter">Contact</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Supporters</a></li>
+                            <li><a href="#">Contact</a></li>
                          </ul>
                          </div>
                   
@@ -141,4 +121,3 @@
 </footer>
 </body>
 </html>
-
