@@ -42,6 +42,7 @@ header {
     padding: 4px;
     text-align: left;
     border: solid 1px #c3c3c3;
+	background-color:#121212
 	}	
 #panel, #panel1, #panel2, #panel3, #panel4, #panel5, #panel6, #panel7, #panel8 {
     padding: 50px;
