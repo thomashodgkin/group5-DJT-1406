@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>BRO</title>
+<title>Contact</title>
 <link href='https://fonts.googleapis.com/css?family=Pinyon+Script' rel='stylesheet' type='text/css'>
 <link href="style3.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="script2.js"></script>
@@ -16,7 +16,7 @@
 	</header>
 	<nav>
 		<label for="show-menu" class="show-menu">Menu</label>
-        <input type="checkbox" id="show-menu" role="button">
+        <input type="checkbox" id="show-menu" value="button">
 	<ul id="menu">   <!-- code originally sourced from http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/ for the menu buttons html and css-->
     	<li><a href="index.html" >Home</a></li>
 		<li>
@@ -49,27 +49,33 @@
 			</ul>
 		</li>
 		<li>
-        	<a href="#">Supporters</a>
+        	<a href="supporters.html" >Support</a>
 			<ul class="hidden">
-				<li><a href="#">Benefactors</a></li>
-				<li><a href="#">Commitee</a></li>
-				<li><a href="#">Support Us</a></li>
+				<li><a href="sponsors.html">Sponsors</a></li>
 			</ul>
         </li>
 		<li><a href="contact.html" class="thispage">Contact</a></li>
 	</ul>
     </nav> <!--the end of the menu-->
  		<div id="banner">&nbsp;
-    	<img src="bg (1).jpg" width="100%" height="" alt="The orchestra"/> 
         </div>
         <!--content items all go in these divs, cut and paste with incremental numbers to keep track of-->
-		<div id="content1"> 
+			<div id="container"> 
+            	<div id="content"> 
+                    <div id="section_1">
+            <p>For general enquiries, please fill out the form below or contact us at <a href="mailto:brotownsville@gmail.com" target="_top"><em>brotownsville@gmail.com</em></a></p>
+
+<p>If you are interested in playing for the Barreir Reef Orchestra, please contact us at <a href="mailto:brotownsville@gmail.com" target="_top"><em>brotownsville@gmail.com</em></a></p>
+
+<p>Alternatively, you can directly call: <em>07 4722 2789</em>  </p>
+<p>Or mail to: <em>Box 576, Townsville QLD 4812</em>
+            
             <form id="Enquiry_Form">
                 <h2>Contact us:</h2>
                 <p>
                   <label id="Label_1">Full Name:</label>
                 <br>
-                  <input id="Input_1" type="text" name="Full Name" size="35" maxlength="35" placeholder="Last, First" />
+                  <input id="Input_1" type="text" name="Full Name" size="35" maxlength="35" placeholder="Last, First" oninput="validateInput(this, 'anything', 'Label_1', 'none');"/>
                 </p>
                 <p>
                   <label id="Label_2">Email:</label>
@@ -90,18 +96,9 @@
                   <input type="submit" name="Submit" value="submit" onclick="return submitForm();">
                 </p>
             </form>
-            
-    <script src="jquery.js"></script>
-    <script>
- 
-    $( document ).ready(function() {
-    $("Input_1").blur(function() {
-  		alert( "Handler for .blur() called." );
-	});
-    });
- 
-    </script>
-        </div>
+        			</div>
+       			 </div>
+              </div>
         	<!--  			////////////////only use if needed////////////////
             <div id="content2"> 		
             	<p>Highlight up coming
@@ -136,7 +133,7 @@
      <div id="linktotop"> <a href="#"><p>Back<br>to<br>top</p></a></div>        
      <div id="footerlink2"><ul>
                             <li><a href="gallery.html">Gallery</a></li>
-                            <li><a href="supporters.html">Supporters</a></li>
+                            <li><a href="supporters.html">Support</a></li>
                             <li><a href="contact.html" class="thispagefooter">Contact</a></li>
                          </ul>
                          </div>
