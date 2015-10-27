@@ -2,6 +2,8 @@
 
 // Part of Regular Expression for Email Validation found on "http://stackoverflow.com/questions/46155/validate-email-address-in-javascript".
 
+
+
 function validateInput(box, type, labelID, returnAs)
 {
 	var re;
@@ -21,7 +23,7 @@ function validateInput(box, type, labelID, returnAs)
 			changeBoxInteriorBool = true;
 			break;
 		case "message":
-			re = new RegExp('.{50,}');
+			re = new RegExp('.{20,}');
 			changeBoxInteriorBool = false;
 			break;
 		default:
@@ -93,7 +95,7 @@ function changeLabel(validInput, label, type, labelID)
 		label.style.color = "#ff0000";
 		if (type === "message")
 		{
-			label.innerHTML = "Message: You need at least 50 characters.";
+			label.innerHTML = "Message: You need at least 20 characters.";
 		}
 		if (type === "email")
 		{
