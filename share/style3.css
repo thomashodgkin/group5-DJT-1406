@@ -409,6 +409,30 @@ input {
 
 }
 
+#HistoryDateList{
+	text-align: center;
+
+}
+
+.HistoryDate{
+	display: inline;
+	padding-right: 5px;
+	border-right-style: solid;
+	border-right-width: thin;
+}
+
+#HistoryDateList #LastDate{
+	border-right-style: none;
+}
+
+.HistoryDate a:hover{
+	text-decoration: underline;
+}
+
+.BackToTop:hover{
+	text-decoration: underline;
+}
+
 
 /*Responsive Styles*/
 @media all and (max-width : 586px){
